@@ -4,4 +4,4 @@
 
 ### Contents:
 --- 
-During the time of this course i will be adding my homework in this repository.
+During the time of this course, I will be adding my homework to this repository.
