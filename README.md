@@ -1,5 +1,5 @@
 # **Python Fundamentals**
-> **Course date: September 2023**  
+> **Course date:** September 2023  
 > _ongoing_
 
 ### Contents:
