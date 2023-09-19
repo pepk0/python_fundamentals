@@ -23,7 +23,7 @@ def draw_triangle() -> None:
     print()
     height = get_int("Enter the number of rows for the triangle: ")
     direction = get_valid_direction("Enter 'u' for upward \
-                                    or 'd' for downward: ", "ud")
+                                    or 'd' for downward: ", "du")
 
     triangle_height = range(1, height + 1)
 
