@@ -8,12 +8,12 @@ def get_int(prompt: str) -> int:
             print("invalid int")
 
 
-def get_valid_direction() -> str:
+def get_valid_direction(prompt: str, directions: str) -> str:
 
-    valid_directions = "ud"
+    valid_directions = directions
 
     while True:
-        direction = input("Enter 'u' for upward or 'd' for downward: ")
+        direction = input(prompt)
         if direction in valid_directions:
             return direction
         print("invalid directions")
@@ -22,7 +22,8 @@ def get_valid_direction() -> str:
 def draw_triangle() -> None:
     print()
     height = get_int("Enter the number of rows for the triangle: ")
-    direction = get_valid_direction()
+    direction = get_valid_direction("Enter 'u' for upward \
+                                    or 'd' for downward: ", "ud")
 
     triangle_height = range(1, height + 1)
 
