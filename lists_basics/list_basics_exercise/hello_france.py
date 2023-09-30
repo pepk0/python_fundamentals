@@ -12,8 +12,8 @@ ideal_price = {
 
 for item, price in items:
     price = float(price)
-    max_price = ideal_price[item]
-    if price <= max_price and price <= budget:
+    price_limit = ideal_price[item]
+    if price <= price_limit and price <= budget:
         budget -= price
         sold_item = price * 1.4
         sold_items_total += sold_item
