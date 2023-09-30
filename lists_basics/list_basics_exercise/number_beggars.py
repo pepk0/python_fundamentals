@@ -11,5 +11,3 @@ for _ in range(number_of_beggars):
     acuminated_sums.append(acuminated_sum)
 
 print(acuminated_sums)
-
-
