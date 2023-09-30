@@ -1,5 +1,6 @@
 level_of_fire = [el.split(" = ") for el in input().split("#")]
 amount_of_water = int(input())
+
 total_fire = 0
 effort = 0
 cells = []
