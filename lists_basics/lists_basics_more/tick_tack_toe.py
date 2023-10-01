@@ -6,8 +6,8 @@ def check_horizontal(matrix: list) -> int:
             if matrix[row][column] != element:
                 element = 0
                 break
-        # if the break is not triggered, this means a row has the same element
-        # and we have found a winner
+        # if the break is not triggered, this means the row is 
+        # filled with the same elements, and that is the winner
         else:
             break
     return element
@@ -21,8 +21,8 @@ def check_vertical(matrix: list) -> int:
             if matrix[row][column] != element:
                 element = 0
                 break
-        # if the break is not triggered, this means a row has the same element
-        # and we have found a winner
+        # if the break is not triggered, this means the column is 
+        # filled with same elements, and that is the winner
         else:
             break
     return element
