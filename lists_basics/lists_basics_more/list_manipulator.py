@@ -60,8 +60,8 @@ def number_elements(condition, key: str, count: int, list_arg: list):
 
 
 original_list = [int(i) for i in input().split()]
-# this is list of lambdas to be passed to the functions, depending of
-# if the input is even or odd
+# this is list of lambdas to be passed to the functions,
+# depending of if the input is even or odd
 option = {"even": lambda x: x % 2 == 0, "odd": lambda x: x % 2 != 0}
 
 while True:
@@ -70,9 +70,8 @@ while True:
     if user_command == "end":
         break
 
-    # this will store all our results to be printed
-    to_print = None 
-    command, *conditions = user_command.split() 
+    to_print = None  # this will store all our results to be printed
+    command, *conditions = user_command.split()
 
     if command == "exchange":
         index = int(conditions[0])
@@ -107,7 +106,7 @@ while True:
         else:
             to_print = result
 
-    if to_print != None:
+    if to_print != None: # if None there was nothing to print
         print(to_print)
 
 print(original_list)
