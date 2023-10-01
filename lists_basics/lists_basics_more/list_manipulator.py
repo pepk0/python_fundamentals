@@ -1,4 +1,6 @@
 def exchange(index: int, list_arg: list):
+    """splits the list after the index and swaps the two half's,
+    if index is invalid, returns False"""
     if 0 <= index < len(list_arg):
         fist_half = list_arg[:index + 1]
         second_haf = list_arg[index + 1:]
@@ -7,6 +9,8 @@ def exchange(index: int, list_arg: list):
 
 
 def max_number(condition, list_arg: list):
+    """returns the index of the max even or odd number, 
+    -1 if none are found"""
     last_index = None
     compare = -float("inf")
     for index in range(len(list_arg)):
@@ -19,6 +23,8 @@ def max_number(condition, list_arg: list):
 
 
 def min_number(condition, list_arg: list):
+    """returns the index of the min even or odd number, 
+    -1 if none are found"""
     last_index = None
     compare = float("inf")
     for index in range(len(list_arg)):
@@ -31,6 +37,9 @@ def min_number(condition, list_arg: list):
 
 
 def number_elements(condition, key: str, count: int, list_arg: list):
+    """returns the last or first of even or odd numbers,
+    if the count is > then the length of list returns -1
+    if there is no element returns a empty list"""
     result = []
     if count > len(list_arg):
         return -1
@@ -51,6 +60,8 @@ def number_elements(condition, key: str, count: int, list_arg: list):
 
 
 original_list = [int(i) for i in input().split()]
+# this is list of lambdas to be passed to the functions, depending of
+# if the input is even or odd
 option = {"even": lambda x: x % 2 == 0, "odd": lambda x: x % 2 != 0}
 
 while True:
@@ -59,8 +70,9 @@ while True:
     if user_command == "end":
         break
 
-    to_print = None
-    command, *conditions = user_command.split()
+    # this will store all our results to be printed
+    to_print = None 
+    command, *conditions = user_command.split() 
 
     if command == "exchange":
         index = int(conditions[0])
