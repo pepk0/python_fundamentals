@@ -38,10 +38,10 @@ def check_diagonal(matrix: list) -> int:
 
 
 game_board = [[int(s) for s in input().split()] for _ in range(3)]
-func = [check_diagonal, check_horizontal, check_vertical]
+checks = [check_diagonal, check_horizontal, check_vertical]
 result = 0
-for function in func:
-    result += function(game_board)
+for check in checks:
+    result += check(game_board)
 
 winner = "Draw!"
 if result:
