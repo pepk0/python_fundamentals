@@ -12,6 +12,6 @@ input_operation = input()
 first_num = int(input())
 second_num = int(input())
 
-operation = get_func(input_operation)
-result = operation(first_num, second_num)
+calc_result = get_func(input_operation)
+result = calc_result(first_num, second_num)
 print(result)
