@@ -29,7 +29,8 @@ def calc_simple_interest() -> str:
 
 def calc_compound_interest() -> str:
     principal_amount = get_num("Enter principal amount: ")
-    interest_rate = get_num("Enter annual interest rate %: ", (1, 100))
+    interest_rate = get_num(
+        "Enter annual interest rate %: ", (1, 100), "percent")
     time = get_num("Enter time (in years): ")
     compound_per_year = get_num(
         "Enter the number of times interest is compounded per year: ",
@@ -59,7 +60,7 @@ def calc_future_value() -> str:
     interest_rate = get_num("Enter interest rate %: ", (1, 100), "percent")
     number_years = get_num("Enter number of years: ")
     # converting to decimal percent
-    interest_rate /= 100 
+    interest_rate /= 100
     result = investment_amount * (1 + interest_rate) ** number_years
     return f"\nFuture value: ${result:,.2f}\n"
 
@@ -107,14 +108,14 @@ def main():
             continue
 
         print(to_print)
-        
+
         if user_quit(
-            "Do you want to perform another calculation?: ", ("yes", "no")):
+                "Do you want to perform another calculation?: ", ("yes", "no")):
             calc_running = False
             continue
-    
+
     else:
-        (print("\nGoodbye!\n")) # if flag if false we execute this
+        (print("\nGoodbye!\n"))  # if flag if false we execute this
 
 
 if __name__ == "__main__":
