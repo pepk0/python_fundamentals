@@ -77,7 +77,7 @@ def main():
     calc_running = True
 
     while calc_running:
-
+        # Main Menu of choices
         print("Main Menu:\n", " 1.Calculate Simple Interest",
               " 2.Calculate Compound Interest", " 3.Calculate Loan Payment",
               " 4.Calculate Future Value of Savings", " 5.Quit", sep="\n")
@@ -89,19 +89,15 @@ def main():
         if user_choice == 1:
             print("\nCalculate Simple Interest\n")
             to_print = calc_simple_interest()
-
         elif user_choice == 2:
             print("\nCalculate Compound Interest\n")
             to_print = calc_compound_interest()
-
         elif user_choice == 3:
             print("\nCalculate Loan Payment\n")
             to_print = calc_loan_payment()
-
         elif user_choice == 4:
             print("\nCalculate Future Value of Savings\n")
             to_print = calc_future_value()
-
         else:
             calc_running = False
             continue
