@@ -18,7 +18,8 @@ def get_num(prompt: str, scope=None, error="number") -> float | int:
 
 def calc_simple_interest() -> str:
     principal_amount = get_num("Enter principal amount: ")
-    interest_rate = get_num("Enter annual interest rate %: ", (1, 100))
+    interest_rate = get_num(
+        "Enter annual interest rate %: ", (1, 100), "percent")
     time = get_num("Enter time (in years): ")
     # converting to decimal percent
     interest_rate /= 100
@@ -65,7 +66,8 @@ def calc_future_value() -> str:
     return f"\nFuture value: ${result:,.2f}\n"
 
 
-def user_quit(prompt: str, valid_choices: tuple) -> bool:
+def user_quit(prompt: str,) -> bool:
+    valid_choices = ("yes", "no")
     while True:
         user_choice = input(prompt)
         if user_choice in valid_choices:
@@ -109,13 +111,12 @@ def main():
 
         print(to_print)
 
-        if user_quit(
-                "Do you want to perform another calculation?: ", ("yes", "no")):
+        if user_quit("Do you want to perform another calculation?: "):
             calc_running = False
             continue
 
     else:
-        (print("\nGoodbye!\n"))  # if flag if false we execute this
+        (print("\nGoodbye!\n"))  # if flag is false we execute this
 
 
 if __name__ == "__main__":
