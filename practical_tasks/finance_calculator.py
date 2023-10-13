@@ -5,8 +5,6 @@ def get_num(prompt: str, scope=None, error="number") -> float | int:
     while True:
         try:
             number = float(input(prompt))
-            if number.is_integer():  # type: ignore
-                number = int(number)
             if scope:
                 lower_range, upper_range = scope
                 if number < lower_range or number > upper_range:
