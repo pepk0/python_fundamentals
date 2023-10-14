@@ -1,4 +1,4 @@
-def get_num(prompt: str, scope=None, error="number") -> float | int:
+def get_num(prompt: str, scope=None, error="number") -> float:
     """"loops until a valid int or float are given, 
     space controls the range of the number
     error prints the expected type of input when not given"""
