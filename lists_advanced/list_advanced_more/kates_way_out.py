@@ -10,7 +10,6 @@ def find_kate(matrix: list) -> tuple:
 def mark_maze_moves(matrix: list) -> None:
     directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
     kate_position = find_kate(matrix)
-
     matrix[kate_position[0]][kate_position[1]] = 1
     queue = [kate_position]
 
