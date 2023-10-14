@@ -51,7 +51,6 @@ def check_exits(matrix: list) -> str:
     return "Kate cannot get out"
 
 
-
 maze = [[el for el in input()] for _ in range(int(input()))]
 print(check_exits(maze))
 # visualize maze
