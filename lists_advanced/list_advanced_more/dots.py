@@ -4,7 +4,8 @@ def find_connected_areas(row: int, col: int, matrix: list) -> int:
         return 0
     if matrix[row][col] != ".":
         return 0
-    # We set the current position to "1" so we don't search for it again
+    # We set the current position to "1" so we don't search for it again,
+    # and so we can visualize it better when we print the matrix
     matrix[row][col] = "1"
     result = 1
     result += find_connected_areas(row + 1, col, matrix)
