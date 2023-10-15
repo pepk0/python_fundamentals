@@ -1,28 +1,32 @@
 def find_connected_areas(row: int, col: int, matrix: list) -> int:
     # recursive base case
-    if row < 0 or row >= len(matrix) or col < 0 or col >= len(matrix[0]):
+    if row < 0 or col < 0 or row >= len(matrix) or col >= len(matrix[0]):
         return 0
-    if matrix[row][col] == "-":
+    if matrix[row][col] != ".":
         return 0
     # we set the current position to "-" so we dont search for it again
-    matrix[row][col] = "-"
+    matrix[row][col] = "1"
     result = 1
     result += find_connected_areas(row + 1, col, matrix)
     result += find_connected_areas(row - 1, col, matrix)
     result += find_connected_areas(row, col + 1, matrix)
     result += find_connected_areas(row, col - 1, matrix)
-    return  result
+    return result
 
 
-maze = [[el for el in input()] for _ in range(int(input()))]
-result = 0
-for row in range(len(maze)):
-    for col in range(len(maze[0])):
-        if maze[row][col] == ".":
-            connected_area = find_connected_areas(row, col, maze)
+def get_longest_area(matrix: list) -> int:
+    result = 0
+    for cur_row in range(len(maze)):
+        for cur_col in range(len(maze[0])):
+            connected_area = find_connected_areas(cur_row, cur_col, matrix)
             if connected_area > result:
                 result = connected_area
-print(connected_area)
+    return result
+
+
+maze = [[el for el in input().split()] for _ in range(int(input()))]
+result = 0
+print(get_longest_area(maze))
 # visualise maze
 # for row in maze:
 #     print(*row, sep=" ")
