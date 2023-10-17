@@ -42,7 +42,7 @@ def check_exits(matrix: list) -> str:
             if (new_row < 0 or new_row >= len(matrix)) \
                     or (new_col < 0 or new_col >= len(matrix[0])):
                 break
-            if type(matrix[new_row][new_col]) == int:
+            if type(matrix[new_row][new_col]) is int:
                 if matrix[new_row][new_col] > longest_path:
                     longest_path = matrix[new_row][new_col]
             cur_row, cur_col = new_row, new_col
