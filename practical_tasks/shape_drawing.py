@@ -1,5 +1,4 @@
 def get_int(prompt: str) -> int:
-
     while True:
         try:
             num = int(input(prompt))
@@ -9,7 +8,6 @@ def get_int(prompt: str) -> int:
 
 
 def get_valid_direction(prompt: str, directions: str) -> str:
-
     valid_directions = directions
 
     while True:
