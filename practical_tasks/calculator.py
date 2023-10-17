@@ -2,7 +2,7 @@ def get_float_input(prompt: str) -> float:
     while True:
         try:
             float_input = float(input(prompt))
-            if float_input.is_integer(): #type: ignore
+            if float_input.is_integer():  # type: ignore
                 float_input = int(float_input)
             return float_input
         except ValueError:
@@ -45,7 +45,6 @@ def multiplication(num_one, num_two) -> str:
 
 
 def main():
-
     print("Menu:\n", " 1.Addition", " 2.Subtraction", " 3.Multiplication",
           " 4.Division", " 5.Quit", sep="\n")
 
@@ -66,7 +65,7 @@ def main():
             result = multiplication(first_number, second_number)
         elif choice == "4":
             result = division(first_number, second_number)
-            if result == False:
+            if not result:
                 result = "Can't divide by zero!"
 
         print(result)
