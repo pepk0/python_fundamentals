@@ -26,7 +26,6 @@ def get_longest_area(matrix: list) -> int:
 
 
 maze = [[el for el in input().split()] for _ in range(int(input()))]
-result = 0
 print(get_longest_area(maze))
 # visualize maze
 # for row in maze:
