@@ -1,10 +1,12 @@
 def find_kate(matrix: list) -> tuple:
+    kate_position = (0, 0)
     for row in range(len(matrix)):
         for col in range(len(matrix[0])):
             if matrix[row][col] == "k":
                 # third value used for moves count
                 kate_position = (row, col, 1)
                 return kate_position
+    return kate_position
 
 
 def mark_maze_moves(matrix: list) -> None:
