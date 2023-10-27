@@ -12,5 +12,6 @@ During the time of this course, I will be adding my homework to this repository.
 [➡️ **Data Types and Variables**](https://github.com/pepk0/python_fundamentals/tree/main/data_types_and_variables)  
 [➡️ **Lists Basics**](https://github.com/pepk0/python_fundamentals/tree/main/lists_basics)  
 [➡️ **Functions**](https://github.com/pepk0/python_fundamentals/tree/main/functions)  
-[➡️ **List Advanced**](https://github.com/pepk0/python_fundamentals/tree/main/lists_advanced)
+[➡️ **List Advanced**](https://github.com/pepk0/python_fundamentals/tree/main/lists_advanced)  
+[➡️ **Objects and Classes**](https://github.com/pepk0/python_fundamentals/tree/main/objects_and_classes)
 
