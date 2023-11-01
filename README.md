@@ -13,5 +13,6 @@ During the time of this course, I will be adding my homework to this repository.
 [➡️ **Lists Basics**](https://github.com/pepk0/python_fundamentals/tree/main/lists_basics)  
 [➡️ **Functions**](https://github.com/pepk0/python_fundamentals/tree/main/functions)  
 [➡️ **List Advanced**](https://github.com/pepk0/python_fundamentals/tree/main/lists_advanced)  
-[➡️ **Objects and Classes**](https://github.com/pepk0/python_fundamentals/tree/main/objects_and_classes)
+[➡️ **Objects and Classes**](https://github.com/pepk0/python_fundamentals/tree/main/objects_and_classes)  
+[➡️ **Dictionaries**](https://github.com/pepk0/python_fundamentals/tree/main/dictionaries)
 
