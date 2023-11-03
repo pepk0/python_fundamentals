@@ -1,9 +1,3 @@
-def fill_up_phonebook(name: str, number: str, phonebook: dict) -> None:
-    if name not in phonebook:
-        phonebook[name] = ""
-    phonebook[name] = number
-
-
 def find_user(user_name: str, phonebook: dict) -> str:
     result = f"Contact {user_name} does not exist."
     if user_name in phonebook:
@@ -19,7 +13,7 @@ while 1:
         number_searches = int(user_information[0])
         break
     user_name, user_phone_number = user_information
-    fill_up_phonebook(user_name, user_phone_number, contact_phonebook)
+    contact_phonebook[user_name] = user_phone_number
 
 for _ in range(number_searches):
     user_query = input()
