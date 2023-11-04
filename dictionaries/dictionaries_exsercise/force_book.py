@@ -10,7 +10,7 @@ def add_side(user: str, side: str, register: dict) -> None:
 
 
 def switch_sides(user: str, side: str, register: dict) -> str:
-    for register_sides, side_users in register.items():
+    for _, side_users in register.items():
         if user in side_users:
             side_users.remove(user)
     add_side(user, side, register)
