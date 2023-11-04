@@ -25,5 +25,6 @@ while 1:
     add_dwarf(dwarf_name, dwarf_hat_color, int(dwarf_physique), all_dwarfs)
 
 colored_hats = count_hat_color(all_dwarfs)
-for (hat_color, name), physique in sorted(all_dwarfs.items(), key= lambda x: (-x[1], -colored_hats[x[0][0]])):
+for (hat_color, name), physique in sorted(
+        all_dwarfs.items(), key=lambda x: (-x[1], -colored_hats[x[0][0]])):
     print(f"({hat_color}) {name} <-> {physique}")
