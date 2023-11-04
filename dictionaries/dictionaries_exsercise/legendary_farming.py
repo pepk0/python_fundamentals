@@ -23,9 +23,9 @@ legendary_items = {
 
 while 1:
     materials = input().split()
-    to_print = gather_materials(materials, resources, legendary_items)
-    if to_print:
-        print(to_print)
+    obtained = gather_materials(materials, resources, legendary_items)
+    if obtained:
+        print(obtained)
         break
 
 print(*[f"{k}: {v}" for k, v in resources.items()], sep="\n")
