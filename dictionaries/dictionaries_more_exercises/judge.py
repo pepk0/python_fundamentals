@@ -15,6 +15,7 @@ def add_submission_information(user: str, contest: str, points: int,
 judge_results = {}
 individual_results = {}
 sorting_key = lambda x: (-x[1], x[0])
+
 while 1:
     contest_submission = input().split(" -> ")
     if len(contest_submission) <= 1:
@@ -25,12 +26,10 @@ while 1:
 
 for contest, results in judge_results.items():
     print(f"{contest}: {len(results.values())} participants")
-    for position, result in enumerate(sorted(results.items(), 
+    for position, (name, points) in enumerate(sorted(results.items(), 
                                              key=sorting_key), 1):
-        name, points = result
         print(f"{position}. {name} <::> {points}")
 print("Individual standings:")
-for position, result in enumerate(sorted(individual_results.items(), 
+for position, (name, points) in enumerate(sorted(individual_results.items(), 
                                          key=sorting_key), 1):
-    name, points = result
     print(f"{position}. {name} -> {points}")
