@@ -1,4 +1,5 @@
-def gather_materials(items: list, resources_dict: dict, legendaries: dict):
+def gather_materials(items: list, resources_dict: dict, 
+                     legendaries: dict) -> str | None:
     for index in range(0, len(items), 2):
         material = items[index + 1].lower()
         if material not in resources_dict:
