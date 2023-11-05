@@ -16,7 +16,7 @@ judge_results = {}
 individual_results = {}
 sorting_key = lambda x: (-x[1], x[0])
 
-while 1:
+while True:
     contest_submission = input().split(" -> ")
     if len(contest_submission) <= 1:
         break
