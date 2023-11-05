@@ -39,6 +39,6 @@ for type, dragons in all_dragons.items():
     average_damage, average_health, average_armor = calculate_stats(dragons)
     print(f"{type}::({average_damage:.2f}"
           f"/{average_health:.2f}/{average_armor:.2f})")
-    for name, (damage, health, armor) in sorted(dragons.items(), 
+    for name, (damage, health, armor) in sorted(dragons.items(),
                                                 key=lambda x: x[0]):
         print(f"-{name} -> damage: {damage}, health: {health}, armor: {armor}")
