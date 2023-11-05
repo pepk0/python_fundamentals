@@ -21,7 +21,7 @@ def find_best_candidate(contest: dict) -> str:
 
 contest_credentials = {}
 contest_results = {}
-while 1:
+while True:
     contest_information = input().split(":")
     if contest_information[0] == "end of contests":
         break
