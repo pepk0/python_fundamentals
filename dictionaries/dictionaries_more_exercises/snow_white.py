@@ -17,7 +17,7 @@ def count_hat_color(dwarfs: dict) -> dict:
 
 
 all_dwarfs = {}
-while 1:
+while True:
     dwarf = input().split(" <:> ")
     if len(dwarf) <= 1:
         break
