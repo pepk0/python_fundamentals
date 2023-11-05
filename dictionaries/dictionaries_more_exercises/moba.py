@@ -25,7 +25,7 @@ def battle(player: str, other: str, players: dict) -> None:
 
 
 player_pool = {}
-while 1:
+while True:
     command = input()
     if "vs" in command:
         player_one, player_two = command.split(" vs ")
