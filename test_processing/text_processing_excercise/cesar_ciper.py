@@ -4,5 +4,6 @@ def replace_character(str_word: str) -> str:
         result += chr(ord(character) + 3)
     return result
 
+
 message = input()
 print(replace_character(message))
