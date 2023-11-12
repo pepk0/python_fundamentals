@@ -19,9 +19,9 @@ def extract_information(key: list, message: str) -> str:
     treasure_type = re.search(r"[&][A-Za-z]+[&]", hidden_information)
     treasure_coordinates = re.search(r"[<].+[>]", hidden_information)
     treasure = treasure_type.group(0).replace("&", "", 2)
-    coordinates = treasure_coordinates.group(0).replace("<", "").replace(">", "")
+    coordinates = treasure_coordinates.group(
+        0).replace("<", "").replace(">", "")
     return f"Found {treasure} at {coordinates}"
-
 
 
 cipher_key = [int(i) for i in input().split()]
