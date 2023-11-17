@@ -23,6 +23,6 @@ while True:
         items.append(product)
 
 print("Bought furniture:")
-for item in items:
+for item in items: # didn't work with a unpack & spe=" "
     print(item)
 print(f"Total money spend: {total_price:.2f}")
