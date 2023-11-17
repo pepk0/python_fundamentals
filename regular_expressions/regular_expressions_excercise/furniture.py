@@ -5,7 +5,7 @@ def find_items(text: str):
     pattern = r"^>>([A-Za-z]+)<<(\d+\.?\d*)!([0-9]+)$"
     result = re.search(pattern, text)
     if result:
-        return result.group(1, 2, 3)
+        return result.group(1), float(result.group(2)), int(result.group(3))
     return None
 
 
@@ -17,8 +17,7 @@ while True:
         break
     item_info = find_items(item)
     if item_info:
-        product, price, quantity = (item_info[0], float(item_info[1]),
-                                    int(item_info[2]))
+        product, price, quantity = item_info
         total_price += price * quantity
         items.append(product)
 
