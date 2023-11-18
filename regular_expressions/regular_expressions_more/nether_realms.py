@@ -23,6 +23,6 @@ def calculate_damage(text: str) -> float:
 
 demons = re.sub(" ", "", input()).split(",")
 for demon in sorted(demons):
-    health = get_demon_health(demon)  
-    damage = calculate_damage(demon)  
+    health = get_demon_health(demon)
+    damage = calculate_damage(demon)
     print(f"{demon} - {health} health, {damage:.2f} damage")
