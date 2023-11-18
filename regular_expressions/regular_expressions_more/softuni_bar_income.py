@@ -36,8 +36,7 @@ def validate_line(text: str):
     price = extract_price(text)
     if customer and product and quantity and price:
         total_per_customer = price * quantity
-        return total_per_customer, (f"{customer}: "
-                                    f"{product} - {total_per_customer:.2f}")
+        return customer, product, total_per_customer
 
 
 total_income = 0
@@ -47,7 +46,8 @@ while True:
         break
     result = validate_line(line_input)
     if result:
-        total_income += result[0]
-        print(result[1])
+        customer, product, total = result
+        total_income += total
+        print(f"{customer}: {product} - {total:.2f}")
 
 print(f"Total income: {total_income:.2f}")
