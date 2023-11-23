@@ -2,11 +2,8 @@ import re
 
 
 def get_demon_health(text: str) -> int:
-    health = 0
     match_pattern = re.findall(r"[^0-9\*\+\-\/\.]", text)
-    for letter in match_pattern:
-        health += ord(letter)
-    return health
+    return sum([ord(letter) for letter in match_pattern])
 
 
 def calculate_damage(text: str) -> float:
