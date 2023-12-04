@@ -1,6 +1,7 @@
 # **Python Fundamentals**
 > **Course date:** September 2023  
-> _ongoing_
+>> **finished** : [**certificate**](https://softuni.bg/certificates/details/194497/b6034711)
+
 
 ### Contents:
 --- 
